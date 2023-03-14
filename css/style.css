@@ -1,0 +1,154 @@
+:root{
+    /* Primary color */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral color */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+
+    /* font size */
+    --font-size: 15px;
+}
+
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font: inherit; */
+}
+
+/* dark mode user-agent-styles */
+
+/* html {
+  color-scheme: dark light;
+} */
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size);
+  color: var(--Grayish-Blue);
+  background-color: var(--Very-Light-Gray);
+  display: grid;
+  place-content: center;
+}
+h1,h3{
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+p{
+  font-weight: 400;
+}
+.container{
+  padding: 4rem 2rem;
+}
+.presentation{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.presentation-title{
+  margin-bottom: 1rem;
+}
+.presentation-title h1{
+  font-size: x-large;
+}
+.presentation-title span{
+  font-weight: 200;
+}
+.card{
+  max-width: 350px;
+  margin-inline: auto;
+  background-color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 15px 20px 0px  hsla(234, 12%, 34%, 20%);
+  padding: 2rem 1.7rem;
+  border-top: 3px solid ;
+  border-radius: 5px;
+}
+.middle-cards{
+  margin-bottom: 1.5rem;
+}
+.card h3{
+  font-size: 20px;
+}
+.card:last-of-type{
+  margin-bottom: 0;
+}
+.card p{
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 13px;
+  line-height: 22px;
+}
+.card img{
+  margin-left: auto;
+}
+
+.supervisor-card{
+  border-color: var(--Cyan);
+}
+.team-builder-card{
+  border-color: var(--Red);
+}
+.karma-card{
+  border-color: var(--Orange);
+}
+.calculator-card{
+  border-color: var(--Blue);
+}
+
+/* desktop model */
+
+@media (min-width: 992px) {
+
+  .presentation-title h1{
+    font-size: 36PX;
+  }
+  .presentation{
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .cards-features{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+    column-gap: 2rem;
+  }
+  .card{
+  margin-bottom: 2rem;
+  }
+  .middle-cards{
+    margin-bottom: 0;
+  }
+  .cards-features > .card:first-of-type{
+    margin-bottom: 0;
+  }
+}
